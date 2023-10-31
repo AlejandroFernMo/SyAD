@@ -69,10 +69,13 @@ Para acceder a esta herramienta solo debemos seleccionar "crear punto de restaur
 
 Analiza, configura y prueba la herramienta de copia de seguridad Backup4all.
 
-Para realizar la instalación de Backup4all, nos dirigimos a su página principal para iniciar la descarga del programa. Podemos ver que tiene dos versiones disponibles, una portable para almacenar en un USB y la versión de escritorio. Descargamos la versión de escritorio y procedemos a optar por la versión de prueba de 30 días. Tras iniciar el programa, podremos iniciar nuevos trabajos, que en definitiva son tareas para realizar copias de seguridad. Al iniciar la tarea, nos solicitará la ubicación para almacenar el backup, seguido de los directorios de nuestro PC que queremos salvaguardar. Se nos ofrece también la opción de encriptar los archivos y enviar un email al administrador.
-
+Para realizar la instalación de Backup4all, nos dirigimos a su página principal para iniciar la descarga del programa. Podemos ver que tiene dos versiones disponibles, una portable para almacenar en un USB y la versión de escritorio.
+![Versiones de backup4all](imagenes/backup4allversion.PNG)
+Descargamos la versión de escritorio y procedemos a optar por la versión de prueba de 30 días. Tras iniciar el programa, podremos iniciar nuevos trabajos, que en definitiva son tareas para realizar copias de seguridad. Al iniciar la tarea, nos solicitará la ubicación para almacenar el backup, seguido de los directorios de nuestro PC que queremos salvaguardar. Se nos ofrece también la opción de encriptar los archivos y enviar un email al administrador.
+![Encriptacion backup4all](imagenes/Backup4allEncriptacion.PNG)
 Las tareas se pueden automatizar creando copias de seguridad según la frecuencia que se desee.
-
+![Programacion backup4all](imagenes/Backup4allPropramacion.PNG)
+![Programacion backup4all](imagenes/backup4allHecho.PNG)
 
 
 # Actividad 6: Configura y automatiza la copia de seguridad en un entorno linux de una estructura de directorios. Utiliza para ello el comando tar y el servicio crond – consideramos que la copia se realiza en el mismo equipo.
