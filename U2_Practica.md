@@ -330,7 +330,7 @@ Paso 6: Cuando se crea el cluster, aparecerá una nueva sección con un código 
 
 Paso 7: Acceda vía web a la segunda máquina. En la sección del cluster, seleccione "Unirse" (Join) y aparecerá una ventana en la que deberá introducir el código del cluster y la contraseña del usuario que lo creó.
 
-![proxmox cluster join](imagenes/proxmoxjoin2.PNG)
+![proxmox cluster join](imagenes/proxmojoin2.PNG)
 
 Paso 8: Refresque las páginas y verá cómo ambas máquinas son ahora nodos que pertenecen al mismo cluster.
 
