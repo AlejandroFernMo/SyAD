@@ -70,8 +70,6 @@ Para acceder a esta herramienta solo debemos seleccionar "crear punto de restaur
 Analiza, configura y prueba la herramienta de copia de seguridad Backup4all.
 
 Para realizar la instalación de Backup4all, nos dirigimos a su página principal para iniciar la descarga del programa. Podemos ver que tiene dos versiones disponibles, una portable para almacenar en un USB y la versión de escritorio.
-![backup4allversion](https://github.com/AlejandroFernMo/SyAD/assets/117440599/11ebdfa3-c900-4597-8311-6bf68d4445bf)
-[![Foo](https://github.com/AlejandroFernMo/SyAD/blob/main/imagenes/backup4allversion.PNG)]
 ![Versiones de backup4all](imagenes/backup4allversion.PNG)
 Descargamos la versión de escritorio y procedemos a optar por la versión de prueba de 30 días. Tras iniciar el programa, podremos iniciar nuevos trabajos, que en definitiva son tareas para realizar copias de seguridad. Al iniciar la tarea, nos solicitará la ubicación para almacenar el backup, seguido de los directorios de nuestro PC que queremos salvaguardar. Se nos ofrece también la opción de encriptar los archivos y enviar un email al administrador.
 ![Encriptacion backup4all](imagenes/Backup4allEncriptacion.PNG)
@@ -193,17 +191,25 @@ AWS Backup es una herramienta poderosa para gestionar y automatizar las copias d
 
 En esta actividad, configuraremos y automatizaremos la copia de seguridad en un entorno Linux de una estructura de directorios utilizando el comando `duplicity` y el servicio `crond`. Consideraremos que la copia se realiza en el mismo equipo.
 
-Para realizar copias de seguridad con `duplicity`, primero debemos definir el directorio del cual se realizará la copia de seguridad y el lugar donde se almacenará. Usaremos el siguiente comando:
+Para realizar copias de seguridad con `duplicity`, primero debemos definir el directorio del cual se realizará la copia de seguridad el lugar donde se almacenará y la clave publica de gpg. Usaremos el siguiente comando:
 
 duplicity --encrypt-key "ClavePublicaGpg" /directoria/a/copiar file:///directorio/donde/se/almacena
 
 Este comando se introduce en un script que, al ejecutarlo, creará una copia de seguridad de un directorio en el directorio que le hayamos asignado.
+
+![duplicity](imagenes/duplicitybueno.PNG)
+
+Para listar tu clave gpg se puede hacer uso del comando 
+
+gpg --list-keys
 
 Para automatizar esta función, utilizaremos `crontab`. Añadiremos los parámetros que determinan cada cuánto tiempo queremos realizar la copia de seguridad junto con el script que se iniciará. Por ejemplo, para ejecutar el script cada día a la medianoche, puedes agregar la siguiente línea en el archivo `crontab`:
 
 0 0 * * * /ruta/al/script_de_copia.sh
 
 Asegúrate de ajustar la hora y la ubicación del script según tus necesidades. Con estos pasos, habrás configurado y automatizado la copia de seguridad de directorios en un entorno Linux utilizando el comando `duplicity` y el servicio `crond`.
+
+![duplicity](imagenes/duplicitycrontab.PNG)
 
 # Actividad 18
 
@@ -224,12 +230,13 @@ Paso 2: Una vez iniciado el programa, nos mostrará un tutorial con todas las op
 - Otras opciones
 
 Paso 3: Procedemos a crear unos directorios en el disco duro.
-
+![Acronnis](imagenes/acroniscopia.PNG)
 Paso 4: Creamos una copia de seguridad en un directorio del propio equipo, en la sección "Copias de seguridad".
-
+![Acronis Copia seguridad](imagenes/Acronis_Copia_hecha.PNG)
 Paso 5: Formateamos el disco duro.
 
 Paso 6: Procedemos a restaurar los archivos utilizando la sección "Restaurar" del programa.
+![Acronis recuperado](imagenes/AcronisRecuperado.PNG)
 
 Acronis True Image es una herramienta versátil para la clonación, generación de copias de seguridad y restauración de datos, lo que permite mantener la integridad y disponibilidad de la información en equipos tanto locales como remotos.
 
@@ -239,18 +246,21 @@ Para realizar la instalación de Ubuntu Server en un RAID 1, siga estos pasos:
 
 Paso 1: Configure su máquina virtual y agregue 2 discos duros que le permitirán crear el RAID.
 
+![Raid Ubuntu](imagenes/raidubuntu.PNG)
+
 Paso 2: Inicie la instalación del sistema operativo Ubuntu Server de manera normal. Durante el proceso de instalación, llegará a la configuración del almacenamiento.
 
 Paso 3: En la configuración del almacenamiento, elija la opción personalizada (custom).
-
+![Raid Ubuntu storage](imagenes/raidubuntu2.PNG)
 Paso 4: En esta sección, debe agregar el arranque a uno de los discos duros.
 
 Paso 5: Seleccione la opción "Create software RAID", donde podrá elegir los dos discos que conformarán el RAID.
-
+![Raid Ubuntu storage](imagenes/Raidbueno deberdad2.PNG)
+![Raid Ubuntu storage](imagenes/raidbuenodeverdad2.PNG)
 Paso 6: Complete la instalación siguiendo los pasos adicionales según sus necesidades.
 
 Paso 7: Una vez finalizada la instalación, puede comprobar el correcto funcionamiento del RAID utilizando el comando `lsblk`.
-
+![Raid Ubuntu Completo](imagenes/RaidubuntuTodocorrecto.PNG)
 Con estos pasos, habrá realizado la instalación de Ubuntu Server en un RAID 1. El RAID 1 proporciona redundancia de datos al mantener una copia idéntica de los datos en ambos discos, lo que mejora la fiabilidad y la disponibilidad de sus datos.
 
 # Práctica 21: Instalación y puesta en marcha de un sistema de almacenamiento compartido NAS con Openfiler
@@ -275,6 +285,8 @@ Paso 8: Una vez completado el proceso, diríjase al administrador de discos, don
 
 Con estos pasos, habrá instalado y puesto en marcha un sistema de almacenamiento compartido NAS utilizando Openfiler. Este sistema permitirá compartir recursos de almacenamiento de manera eficiente entre múltiples clientes.
 
+![NAS Openfiler](imagenes/openfilerSanConfigurado.PNG)
+
 
 # Práctica 22: Instalación y puesta en marcha de un sistema de almacenamiento compartido SAN con Openfiler
 
@@ -294,6 +306,8 @@ Paso 6: Configure los permisos del directorio compartido. En este caso, se puede
 
 Paso 7: Una vez que el recurso esté listo, acceda a su máquina cliente y monte el directorio compartido en la ubicación que elija.
 
+![SAN Openfiler](imagenes/openfilersanconseguidop.PNG)
+
 Con estos pasos, habrá instalado y puesto en marcha un sistema de almacenamiento compartido SAN utilizando Openfiler. Esto le permitirá compartir recursos de almacenamiento de manera eficiente entre múltiples clientes.
 
 # Práctica final: Instalación y puesta en marcha de un cluster de dos nodos virtualizados utilizando Proxmox
@@ -306,6 +320,8 @@ Paso 2: Descargue Proxmox desde la web oficial: [https://www.proxmox.com/en/down
 
 Paso 3: Una vez instalado el sistema operativo, configure la información de contacto, como el correo electrónico y la contraseña.
 
+![proxmox cliente](imagenes/proxmoxconf.PNG)
+
 Paso 4: Configure la dirección IP de su máquina para que esté en la red. Repita este proceso en todas las máquinas que formarán el cluster.
 
 Paso 5: Acceda a su host y conéctese mediante el cliente web al primer nodo. En el apartado "Cluster", seleccione "Crear".
@@ -314,8 +330,10 @@ Paso 6: Cuando se crea el cluster, aparecerá una nueva sección con un código 
 
 Paso 7: Acceda vía web a la segunda máquina. En la sección del cluster, seleccione "Unirse" (Join) y aparecerá una ventana en la que deberá introducir el código del cluster y la contraseña del usuario que lo creó.
 
+![proxmox cluster join](imagenes/proxmoxjoin2.PNG)
+
 Paso 8: Refresque las páginas y verá cómo ambas máquinas son ahora nodos que pertenecen al mismo cluster.
 
 Con estos pasos, habrá instalado y puesto en marcha un cluster de dos nodos virtualizados utilizando Proxmox. Esto le permitirá administrar y desplegar máquinas virtuales de manera eficiente en un entorno de cluster.
 
-
+![proxmox cluster completo](imagenes/clusterfuncionando.PNG)
