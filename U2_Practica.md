@@ -1,4 +1,101 @@
- de seguridad
+## Práctica Unidad 2 Seguridad
+
+### Actividad 1 - Búsqueda de Información
+
+Búsqueda de información con el fin de elaborar un diccionario de herramientas mencionadas en este tema, y de aquellos que resulten de la búsqueda de información, en el que se describen los siguientes elementos: descripción, http de descarga y http de tutorial/manual de uso, http de ejemplo de aplicación/uso, otros aspectos
+
+- VeraCrypt:
+  - Descripción: VeraCrypt es una bifurcación de TrueCrypt que continúa su desarrollo. Ofrece cifrado de disco y protección de datos.
+  - Descarga: [VeraCrypt Descargas](https://www.veracrypt.fr/en/Downloads.html)
+  - Tutorial/Manual de Uso: [VeraCrypt Tutorial](https://www.veracrypt.fr/en/Beginner%27s%20Tutorial.html)
+
+- KeePass:
+  - Descripción: KeePass es un administrador de contraseñas de código abierto que te permite almacenar y gestionar contraseñas de forma segura.
+  - Descarga: [KeePass Descargas](https://keepass.info/download.html)
+  - Tutorial/Manual de Uso: [KeePass Manual](https://keepass.info/help/v2/sync.html)
+
+- GnuPG (GPG):
+  - Descripción: GnuPG es una implementación gratuita del estándar OpenPGP, que se utiliza para cifrar y firmar mensajes y archivos.
+  - Descarga: [GnuPG Descarga](https://gnupg.org/download/)
+  - Tutorial/Manual de Uso: [GnuPG Manuales](https://gnupg.org/documentation/manuals.html) y [GnuPG Guías](https://gnupg.org/documentation/guides.html)
+
+- VirusTotal:
+  - Descripción: VirusTotal es una herramienta en línea que escanea archivos en busca de malware y proporciona informes detallados sobre posibles amenazas.
+  - Descarga: [VirusTotal](https://www.virustotal.com/gui/home/upload)
+  - Tutorial/Manual de Uso: [VirusTotal Developers](https://developers.virustotal.com/docs)
+
+- Wireshark:
+  - Descripción: Wireshark es un analizador de protocolos de red que permite capturar y analizar el tráfico de red en busca de posibles amenazas.
+  - Descarga: [Wireshark Descargas](https://www.wireshark.org/download.html)
+  - Tutorial/Manual de Uso: [Wireshark Docs](https://www.wireshark.org/docs/)
+
+- Snort:
+  - Descripción: Snort es un sistema de detección de intrusiones de red (IDS) de código abierto que monitorea y analiza el tráfico de red en busca de actividad sospechosa.
+  - Descarga: [Snort Descargas](https://www.snort.org/downloads)
+  - Tutorial/Manual de Uso: [Snort Resources](https://www.snort.org/resources)
+
+- OpenVAS:
+  - Descripción: OpenVAS (Open Vulnerability Assessment System) es un escáner de vulnerabilidades de código abierto que identifica problemas de seguridad en sistemas y redes.
+  - Descarga: [OpenVAS](https://www.greenbone.net/en/products/)
+  - Tutorial/Manual de Uso: [OpenVAS Documents](https://www.greenbone.net/en/documents/)
+
+### Actividad 2 - Sistemas Biométricos
+
+Analiza y describe los sistemas biométricos que actualmente se están utilizando, así como los estudios de implantación de nuevas tecnologías respecto a este campo.
+
+Un sistema biométrico es un control de acceso para acceder a un sistema electrónico mediante alguna característica del individuo. Entre los sistemas biométricos actuales se encuentran:
+
+- Huellas dactilares.
+- Rostro.
+- Termograma facial.
+- Iris.
+- Patrones de la retina.
+- Voz.
+- Firma.
+- Geometría de la mano.
+- Venas de las manos.
+
+En la actualidad, los sistemas de biometría son muy inflexibles debido a que es necesario acercarse mucho al dispositivo que realiza la biometría o ponerse en la misma posición en la que se llevó a cabo la captura de los datos biométricos. Por lo tanto, el avance en este sector se está dirigiendo a poder tomar dichos datos desde distintos ángulos o con distinta iluminación para que la autenticación biométrica sea más flexible.
+
+### Actividad 3 - Copias de Seguridad en Windows 10/Windows Server
+
+Analiza el asistente/herramienta de copias de seguridad con el programador de tareas, restauración de las copias de seguridad, puntos de restauración, disco de reparación y reinicio del sistema en reparación/restauración en un entorno Windows 10 o Windows Server. Realiza el ejemplo pertinente que demuestre la utilización de la herramienta.
+
+Una herramienta que puede resultar muy útil para realizar copias de seguridad del sistema se trata de la creación de puntos de restauración, donde podremos guardar una instantánea de nuestro sistema operativo pudiendo revertir los cambios que realicemos rápida y cómodamente.
+
+Para acceder a esta herramienta solo debemos seleccionar "crear punto de restauración," tras lo que le daremos una descripción. Para restaurar, en el mismo menú donde hemos creado el punto, podremos darle a "restaurar sistema" seleccionando el punto al que queremos restaurar nuestro sistema.
+
+### Actividad 5 - Configuración y Prueba de Backup4all
+
+Analiza, configura y prueba la herramienta de copia de seguridad Backup4all.
+
+Para realizar la instalación de Backup4all, nos dirigimos a su página principal para iniciar la descarga del programa. Podemos ver que tiene dos versiones disponibles, una portable para almacenar en un USB y la versión de escritorio.
+![backup4allversion](https://github.com/AlejandroFernMo/SyAD/assets/117440599/11ebdfa3-c900-4597-8311-6bf68d4445bf)
+[![Foo](https://github.com/AlejandroFernMo/SyAD/blob/main/imagenes/backup4allversion.PNG)]
+![Versiones de backup4all](imagenes/backup4allversion.PNG)
+Descargamos la versión de escritorio y procedemos a optar por la versión de prueba de 30 días. Tras iniciar el programa, podremos iniciar nuevos trabajos, que en definitiva son tareas para realizar copias de seguridad. Al iniciar la tarea, nos solicitará la ubicación para almacenar el backup, seguido de los directorios de nuestro PC que queremos salvaguardar. Se nos ofrece también la opción de encriptar los archivos y enviar un email al administrador.
+![Encriptacion backup4all](imagenes/Backup4allEncriptacion.PNG)
+Las tareas se pueden automatizar creando copias de seguridad según la frecuencia que se desee.
+![Programacion backup4all](imagenes/Backup4allPropramacion.PNG)
+![Programacion backup4all](imagenes/backup4allHecho.PNG)
+
+
+# Actividad 6: Configura y automatiza la copia de seguridad en un entorno linux de una estructura de directorios. Utiliza para ello el comando tar y el servicio crond – consideramos que la copia se realiza en el mismo equipo.
+
+Para realizar esta tarea primero ha de invocarse a crontab con el comando:
+
+sudo crontab -e 
+
+A Continuación nos solicitará con que editor de texto queremos editar el archivo, en mi caso elegí la primera opción nano, una vez en el archivo nos dirigimos al final de este donde tendremos que escribir lo siguiente:  
+
+0 20 * * * sudo tar -cpzf /home/usuario/mi_backup.tar.gz /var/backup
+
+A continuación se realiza una descripción de cada argumento en orden:
+ 
+minutos a la hora que se llevará a cabo la copia de seguridad
+Hora a la que se realizará la copia de seguridad
+Dia del mes en el que se realizará la copia de seguridad
+Mes en el que se realizará la copia de seguridad
 Dia de la semana (Lunes a Domingo) en el que se realiza la copia de seguridad
 
 El resto es el comando para comprimir el archivo que se divide en:
