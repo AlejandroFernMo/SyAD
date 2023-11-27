@@ -15,6 +15,8 @@ Es una edición restaurada de Hiren's BootCD basada en Windows 10 PE x64. Dado q
 
 - Nos dirigimos a directivas de seguridad local de ahí podemos dirigirnos a Directivas de cuenta > Directivas de contraseñas. En este apartado podremos habilitar parámetros para que los usuarios que conecten a la terminal deban hacer uso de contraseñas más complejas, no puedan reutilizar la misma contraseña cuando se les solicite cambiar la contraseña. También se puede controlar el tiempo de vigencia de la contraseña junto con la longitud.
 
+  ![Directiva](imgU3/Act2DirectivaContraseña.PNG)
+
 - Para llevar a cabo las políticas de seguridad en Ubuntu, primero debemos realizar la instalación del programa libpam-cracklib mediante la orden `sudo apt install libpam-cracklib`.
   Añadimos la siguiente línea al archivo de configuración:
   
