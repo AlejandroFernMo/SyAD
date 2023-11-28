@@ -64,15 +64,15 @@ Por último, usamos la orden `rcrack` seguido del directorio de las rainbowtable
 # Actividad 4- Ataques contra contraseñas en Sistemas Windows
 
 - Realizamos una inspección de los puertos abiertos mediante `nmap` y encontramos que el puerto SSH está abierto. Procedemos a realizar un ataque de fuerza bruta con diccionarios para averiguar el usuario y la contraseña.
-- ![Directiva](imgU3/act4scannerssh.PNG)
-- ![Directiva](imgU3/act4loginssh.PNG)
+  ![Directiva](imgU3/act4scannerssh.PNG)
+  ![Directiva](imgU3/act4loginssh.PNG)
 - Accedemos a la carpeta `system32` y luego a `config`, donde encontramos los archivos SAM y SYSTEM. Introducimos un script llamado `vssown.vbs` para generar una unidad virtual con estos dos archivos.
-  - ![Directiva](imgU3/act4c1windows1system321config.PNG)
-  -![Directiva](imgU3/act5script.PNG)
-  -![Directiva](imgU3/Act4Pasascript.PNG)
+  ![Directiva](imgU3/act4c1windows1system321config.PNG)
+  ![Directiva](imgU3/act5script.PNG)
+  ![Directiva](imgU3/Act4Pasascript.PNG)
     
 - Usamos la orden `scp` para copiar desde esta unidad virtual los archivos SAM y SYSTEM a nuestro equipo.
--![Directiva](imgU3/Act4Pasascript.PNG)
+![Directiva](imgU3/Act4Pasascript.PNG)
 - En nuestro equipo, desciframos las contraseñas con diccionarios como `rockyou` o `kaonashi`.
 
 
