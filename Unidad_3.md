@@ -125,7 +125,7 @@ set superusers="root,usuario"
 password root 1111
 password usuario 2222
 EOF
-
+```
 
 
 
