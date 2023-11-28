@@ -66,46 +66,66 @@ rcrack -h hash
 
 # Actividad 4- Ataques contra contraseñas en Sistemas Windows
 
-- Realizamos una inspección de los puertos abiertos mediante `nmap` y encontramos que el puerto SSH está abierto. Procedemos a realizar un ataque de fuerza bruta con diccionarios para averiguar el usuario y la contraseña.
-  ![Directiva](imgU3/act4scannerssh.PNG)
-  ![Directiva](imgU3/act4loginssh.PNG)
-- Accedemos a la carpeta `system32` y luego a `config`, donde encontramos los archivos SAM y SYSTEM. Introducimos un script llamado `vssown.vbs` para generar una unidad virtual con estos dos archivos.
-  ![Directiva](imgU3/act4c1windows1system321config.PNG)
-  ![Directiva](imgU3/act5script.PNG)
-  ![Directiva](imgU3/Act4Pasascript.PNG)
-    
-- Usamos la orden `scp` para copiar desde esta unidad virtual los archivos SAM y SYSTEM a nuestro equipo.
+-Para introducirnos dentro del sistema, realizamos una inspección de los puertos que tiene abiertos mediante nmap y detectando que tiene el puerto ssh abierto.\ 
+![Directiva](imgU3/act4nmap.PNG)
+-Se procede por tanto a realizar un ataque de fuerza bruta con diccionarios para averiguar la contraseña y usuario para poder acceder \
+![Directiva](imgU3/act4scannerssh.PNG)
+![Directiva](imgU3/act4loginssh.PNG)
+-Una vez dentro comprobamos que podemos acceder a la carpeta system32 y de hay a config donde podemos ver el archivo SAM y SYSTEM los cuales contiene las contraseñas\
+![Directiva](imgU3/act4c1windows1system321config.PNG)
+Para poder acceder a dichos archivos introduciremos un script que nos generará una unidad virtual con estos archivos dicho script se llama vssown.vbs.\
+![Directiva](imgU3/act5script.PNG)
 ![Directiva](imgU3/Act4Pasascript.PNG)
-- En nuestro equipo, desciframos las contraseñas con diccionarios como `rockyou` o `kaonashi`.
+-Una vez creada la copia podemos usar la orden scp para copiar desde esta unidad virtual los archivos SAM y SYSTEM a nuestro equipo y unirlas mediante samdump.\
+![Directiva](imgU3/act4copyfantasma.PNG)
+![Directiva](imgU3/act4copyfantasma.PNG)
+-En nuestro equipo podremos descifrar las contraseñas gracias  a la ayuda de otros diccionarios como rokyou o kaonashi, pudiendo descubrir nuevas contraseñas\
+![Directiva](imgU3/act4Mascontraseñas.PNG)
+- Posterormente para ver las contraseñas deberemos usar la orden
+    john --show --format=NT archivo.txt 
 
+Para modificar las contraseñas del sistema he usado Hiren´s BootCD, la cual se puede descargar en (https://www.hirensbootcd.org/download/),  debemos insertar una nueva unidad en la máquina virtual y acceder al menú de boot y solicitar que se arranque el sistema de la unidad que hemos introducido con la iso de Hiren´s BootCD. Una vez inicia el programa nos aparecerá un menú muy parecido a Windows donde debemos acceder a Utility > Security > Password, seleccionando la herramienta NT password edit. Al ejecutar la aplicación nos aparecerá un listado de todos los usuarios del equipo local, pudiendo cambiar la contraseña del usuario que queramos.
+![Directiva](imgU3/bootalpc.PNG)
+![Directiva](imgU3/changepassword.PNG)
 
 # Actividad 5.- Ataques contra contraseñas en Sistemas Linux
 
 - Realizamos el mismo ataque que en la actividad 3 para acceder a una máquina Ubuntu.
+ ![Directiva](imgU3/act5pass.PNG)
+ ![Directiva](imgU3/act5script.PNG)
 - Hacemos un `cat` a los archivos `shadow` y `passwd`, y juntamos ambos archivos con la orden `unshadow`, creando un archivo combinado.
+ ![Directiva](imgU3/act5unshadow.PNG)
 - Pasamos este archivo por John The Ripper para obtener nuevas contraseñas y acceder al objetivo con otras cuentas.
-
-
+  
+  
 # Actividad 6.- Realiza un listado de Congeladores este tipo de herramientas y analiza la instalación y configuración de 2 congeladores
 
 Para congelar la sesión de inicio de una máquina y que esta no guarde ningún cambio realizado por el usuario, podemos hacer uso de diversas herramientas. En este caso, se han utilizado Shadow Defender y Deep Freeze.
 
 - **Shadow Defender:** Se puede descargar desde su [sitio web](http://www.shadowdefender.com/). Permite "congelar" unidades dentro del sistema y hacer que todos los cambios que haga el usuario se pierdan una vez se apague la computadora.
+  ![Directiva](imgU3/act6defenserentershadow.PNG)
 
-- **Deep Freeze:** Lleva a cabo la "congelación" de todo el equipo sin hacer distinciones entre distintas unidades.
-
+- **Deep Freeze:** Lleva a cabo la "congelación" de todo el equipo del mismo modo que Shadow defender, pero este caso teniendo opcion a conectarse con la aplicacion web pudiendo recibir directivas por parte del administrador.
+ ![Directiva](imgU3/act6deepfreeze.PNG)
+ ![Directiva](imgU3/act6deepfrezzepass.PNG)
 
 # Actividad 7: GRUB
 ## a) Protege con contraseña el GRUB, para que no se pueda ejecutar secuencia de comandos, como root, en el arranque.
 ## b) Protege contraseña el arranque de los sistemas operativos.
 
 Para llevar a cabo la securización del Grub, debemos loguearnos en el sistema en el que queramos realizar la operación y dirigirnos al archivo `00_header` ubicado en `/etc/grub.d/`. Una vez en el archivo, debemos introducir las siguientes líneas:
+![Directiva](imgU3/act7-1.PNG)
+
+![Directiva](imgU3/act7-2.PNG)
+![Directiva](imgU3/act7-3.PNG)
+![Directiva](imgU3/act7-4.PNG)
 ```bash
 cat << EOF
 set superusers="root,usuario"
 password root 1111
 password usuario 2222
 EOF
+
 
 
 
