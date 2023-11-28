@@ -12,17 +12,39 @@ Es una edición restaurada de Hiren's BootCD basada en Windows 10 PE x64. Dado q
 
 
 # Actividad 2.- Configuración de Contraseñas Seguras en Windows y Linux
+-Nos dirigimos a directivas de seguridad local de hay podemos dirigirnos a Directivas d e cuenta > Directivas de contraseñas
 
-- Nos dirigimos a directivas de seguridad local de ahí podemos dirigirnos a Directivas de cuenta > Directivas de contraseñas. En este apartado podremos habilitar parámetros para que los usuarios que conecten a la terminal deban hacer uso de contraseñas más complejas, no puedan reutilizar la misma contraseña cuando se les solicite cambiar la contraseña. También se puede controlar el tiempo de vigencia de la contraseña junto con la longitud.
+-En este aprtado podremos habilitar parametros para que los usuarios que conecten a la terminal deban hacer uso de contraseñas mas complejas no puedan reutilizar la misma contraseña cuando se les solicite cambiar la contarseña, tambien se puede controlar el timepo de vigencia de la contraseña junto con la longitud
 
-  ![Directiva](imgU3/Act2DirectivaContraseña.PNG)
+ ![Directiva](imgU3/Act2DirectivaContraseña.PNG)
+ ![Directiva](imgU3/Act2DirectivaContraseñap2.PNG)
 
-- Para llevar a cabo las políticas de seguridad en Ubuntu, primero debemos realizar la instalación del programa libpam-cracklib mediante la orden `sudo apt install libpam-cracklib`.
-  Añadimos la siguiente línea al archivo de configuración:
-  
-password requisite pam_cracklib.so retry=3 minlen=12 difok=3 ucredit=-2 lcredit=-2 dcredit=-2 ocredit=-2
+-Para llevar a cabo las politicas de seguridad en ubuntu, primero debemos realizar la instalacion del programa libpam-cracklib
 
-Estas directivas nos darán recomendaciones para la contraseña de acuerdo a los parámetros que hayamos introducido. Si se insiste en introducir una contraseña que no cumpla las directivas establecidas, se pueden repetir dicha contraseña continuamente.
+-Mediante la orden `sudo apt install libpam-cracklib`
+
+![Directiva](imgU3/Act2DirectivaContraseñaUbu.PNG)
+
+-retry: Número de intentos antes de que el sistema devuelva un error.
+-minlen: Longitud mínima de contraseña.
+-difok: Cambios de caracteres que debe tener la nueva contraseña en comparación con la vieja.
+-ucredit: Caracteres en mayúscula que debe tener.
+-lcredit: Caracteres en minúscula que debe tener.
+-dcredit: El número de dígitos que debe tener la nueva contraseña.
+-ocredit: El número de dígitos que debe tener la contraseña.
+-Las opciones ucredit, lcredit,dcredit y ocredit pueden tener números negativos o positivos, por ejemplo:
+
+-ucredit=-3 : Significa que como mínimo debe tener 3 caracteres en mayúscula.
+-ucredit=+3 : Significa que como máximo debe tener 3 caracteres en mayúscula.
+
+
+-Añadimos la siguiente linea 
+
+`password requisite pam_cracklib.so retry=3 minlen=12 difok=3 ucredit=-2 lcredit=-2 dcredit=-2 ocredit=-2`
+
+![Directiva](imgU3/Act2DirectivaContraseñaUbu4.PNG)
+
+-Estas directivas nos daran recomendaciones para la contraseña de acuerdo a los parametros que hallamos introducido, hasta que el aviso desaparezca, pero si se insiste en introducir una contraseña que no cumpla las directivas establecidas se pueden hacer repitiendo dicha contraseña continuamente.
 
 
 # Actividad 3- Ataques contra contraseñas en Sistemas Windows – FICHERO SAM
