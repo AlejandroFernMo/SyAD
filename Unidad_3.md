@@ -28,17 +28,17 @@ Es una edición restaurada de Hiren's BootCD basada en Windows 10 PE x64. Dado q
 
 ![Directiva](imgU3/Act2DirectivaContraseñaUbu4.PNG)
 
--retry: Número de intentos antes de que el sistema devuelva un error.
--minlen: Longitud mínima de contraseña.
--difok: Cambios de caracteres que debe tener la nueva contraseña en comparación con la vieja.
--ucredit: Caracteres en mayúscula que debe tener.
--lcredit: Caracteres en minúscula que debe tener.
--dcredit: El número de dígitos que debe tener la nueva contraseña.
--ocredit: El número de dígitos que debe tener la contraseña.
--Las opciones ucredit, lcredit,dcredit y ocredit pueden tener números negativos o positivos, por ejemplo:
+-retry: Número de intentos antes de que el sistema devuelva un error.\
+-minlen: Longitud mínima de contraseña.\
+-difok: Cambios de caracteres que debe tener la nueva contraseña en comparación con la vieja.\
+-ucredit: Caracteres en mayúscula que debe tener.\
+-lcredit: Caracteres en minúscula que debe tener.\
+-dcredit: El número de dígitos que debe tener la nueva contraseña.\
+-ocredit: El número de dígitos que debe tener la contraseña.\
+-Las opciones ucredit, lcredit,dcredit y ocredit pueden tener números negativos o positivos, por ejemplo:\
 
--ucredit=-3 : Significa que como mínimo debe tener 3 caracteres en mayúscula.
--ucredit=+3 : Significa que como máximo debe tener 3 caracteres en mayúscula.
+-ucredit=-3 : Significa que como mínimo debe tener 3 caracteres en mayúscula.\
+-ucredit=+3 : Significa que como máximo debe tener 3 caracteres en mayúscula.\
 
 
 -Añadimos la siguiente linea 
