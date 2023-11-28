@@ -52,7 +52,8 @@ Es una edición restaurada de Hiren's BootCD basada en Windows 10 PE x64. Dado q
 
 # Actividad 3- Ataques contra contraseñas en Sistemas Windows – FICHERO SAM
 
--Para obtener las contraseñas mediante rainbowtables usando rainbowcrack, primero debemos descargarnos la aplicación de sus pagina web: http://project-rainbowcrack.com/ gracias a esta aplicación podremos crear nuestras propias rainbow tables, las cuales nos servirán para desencriptar las contraseñas, pero antes de crear las tablas debemos saber que tipo de codificación tienen, para ello haremos uso de la herramienta hash identifier la cual nos dice que están encriptadas en md5.
+-Para obtener las contraseñas mediante rainbowtables usando rainbowcrack, primero debemos descargarnos la aplicación de sus pagina web: (http://project-rainbowcrack.com/) gracias a esta aplicación podremos crear nuestras propias rainbow tables, las cuales nos servirán para desencriptar las contraseñas, pero antes de crear las tablas debemos saber que tipo de codificación tienen, para ello haremos uso de la herramienta hash identifier la cual nos dice que están encriptadas en md5.
+
 -Ahora debemos crear las tablas podemos descargarlas de paginas web como (http://project-rainbowcrack.com/)., o creandolas usando la orden rtgen seguido del sistema de encriptación md5, los caracteres que puede contener la contraseña alpha numeric sigue la longitud de la contraseña minimo y maximo que va regido de acuerdo a los caracteres que hayas introducido, el índice, el tamaño de la cadena, el número de cadenas ha generar y por ultimo el parámetro para dividir las cadenas en archivos más cortos. Quedando la orden de esta manera:
 
 rtgen md5 loweralpha-numeric 1 7 0 3800 33554432 0
