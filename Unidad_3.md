@@ -116,9 +116,6 @@ Para congelar la sesión de inicio de una máquina y que esta no guarde ningún 
 Para llevar a cabo la securización del Grub, debemos loguearnos en el sistema en el que queramos realizar la operación y dirigirnos al archivo `00_header` ubicado en `/etc/grub.d/`. Una vez en el archivo, debemos introducir las siguientes líneas:
 ![Directiva](imgU3/act7-1.PNG)
 
-![Directiva](imgU3/act7-2.PNG)
-![Directiva](imgU3/act7-3.PNG)
-![Directiva](imgU3/act7-4.PNG)
 ```bash
 cat << EOF
 set superusers="root,usuario"
@@ -127,7 +124,9 @@ password usuario 2222
 EOF
 ```
 
-
+![Directiva](imgU3/act7-2.PNG)
+![Directiva](imgU3/act7-3.PNG)
+![Directiva](imgU3/act7-4.PNG)
 
 
 
