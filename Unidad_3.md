@@ -24,7 +24,9 @@ Es una edición restaurada de Hiren's BootCD basada en Windows 10 PE x64. Dado q
 -Mediante la orden `sudo apt install libpam-cracklib`
 
 ![Directiva](imgU3/Act2DirectivaContraseñaUbu.PNG)
+-Despues procedemos a acceder al archivo common-password donde añadiremos los siguientes parametros para configurar el tipo de contraseña que exigiremos a nuestros usuarios.
 
+![Directiva](imgU3/Act2DirectivaContraseñaUbu4.PNG)
 -retry: Número de intentos antes de que el sistema devuelva un error.
 -minlen: Longitud mínima de contraseña.
 -difok: Cambios de caracteres que debe tener la nueva contraseña en comparación con la vieja.
@@ -42,9 +44,10 @@ Es una edición restaurada de Hiren's BootCD basada en Windows 10 PE x64. Dado q
 
 `password requisite pam_cracklib.so retry=3 minlen=12 difok=3 ucredit=-2 lcredit=-2 dcredit=-2 ocredit=-2`
 
-![Directiva](imgU3/Act2DirectivaContraseñaUbu4.PNG)
+![Directiva](imgU3/Act2DirectivaContraseñaUbu2.PNG)
 
 -Estas directivas nos daran recomendaciones para la contraseña de acuerdo a los parametros que hallamos introducido, hasta que el aviso desaparezca, pero si se insiste en introducir una contraseña que no cumpla las directivas establecidas se pueden hacer repitiendo dicha contraseña continuamente.
+![Directiva](imgU3/Act2DirectivaContraseñaUbu3.PNG)
 
 
 # Actividad 3- Ataques contra contraseñas en Sistemas Windows – FICHERO SAM
@@ -61,8 +64,15 @@ Por último, usamos la orden `rcrack` seguido del directorio de las rainbowtable
 # Actividad 4- Ataques contra contraseñas en Sistemas Windows
 
 - Realizamos una inspección de los puertos abiertos mediante `nmap` y encontramos que el puerto SSH está abierto. Procedemos a realizar un ataque de fuerza bruta con diccionarios para averiguar el usuario y la contraseña.
-- Accedemos a la carpeta `system32` y luego a `config`, donde encontramos los archivos SAM y SYSTEM. Introducimos un script llamado `vssown.vbs` para generar una unidad virtual con estos archivos.
+- ![Directiva](imgU3/act4scannerssh.PNG)
+- ![Directiva](imgU3/act4loginssh.PNG)
+- Accedemos a la carpeta `system32` y luego a `config`, donde encontramos los archivos SAM y SYSTEM. Introducimos un script llamado `vssown.vbs` para generar una unidad virtual con estos dos archivos.
+  - ![Directiva](imgU3/act4c1windows1system321config.PNG)
+  -![Directiva](imgU3/act5script.PNG)
+  -![Directiva](imgU3/Act4Pasascript.PNG)
+    
 - Usamos la orden `scp` para copiar desde esta unidad virtual los archivos SAM y SYSTEM a nuestro equipo.
+-![Directiva](imgU3/Act4Pasascript.PNG)
 - En nuestro equipo, desciframos las contraseñas con diccionarios como `rockyou` o `kaonashi`.
 
 
