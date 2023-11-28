@@ -52,14 +52,15 @@ Es una edición restaurada de Hiren's BootCD basada en Windows 10 PE x64. Dado q
 
 # Actividad 3- Ataques contra contraseñas en Sistemas Windows – FICHERO SAM
 
-- Para obtener las contraseñas mediante rainbowtables usando rainbowcrack, primero debemos descargarnos la aplicación de su página web: [RainbowCrack](http://project-rainbowcrack.com/). Antes de crear las tablas, debemos saber el tipo de codificación que tienen, para lo cual haremos uso de la herramienta hash identifier, la cual nos dice que están encriptadas en md5.
-Luego, creamos las tablas mediante la orden:
+-Para obtener las contraseñas mediante rainbowtables usando rainbowcrack, primero debemos descargarnos la aplicación de sus pagina web: http://project-rainbowcrack.com/ gracias a esta aplicación podremos crear nuestras propias rainbow tables, las cuales nos servirán para desencriptar las contraseñas, pero antes de crear las tablas debemos saber que tipo de codificación tienen, para ello haremos uso de la herramienta hash identifier la cual nos dice que están encriptadas en md5.
+-Ahora debemos crear las tablas podemos descargarlas de paginas web como (http://project-rainbowcrack.com/)., o creandolas usando la orden rtgen seguido del sistema de encriptación md5, los caracteres que puede contener la contraseña alpha numeric sigue la longitud de la contraseña minimo y maximo que va regido de acuerdo a los caracteres que hayas introducido, el índice, el tamaño de la cadena, el número de cadenas ha generar y por ultimo el parámetro para dividir las cadenas en archivos más cortos. Quedando la orden de esta manera:
 
 rtgen md5 loweralpha-numeric 1 7 0 3800 33554432 0
 
-Ordenamos las tablas con la orden `rtsort` o `rtsort *.rt`.
-Por último, usamos la orden `rcrack` seguido del directorio de las rainbowtables, `-h`, y la cadena hash que queremos descifrar.
+-Una vez creada la tabla procedemos a ordenarlas con la orden rtsort . o rtsort *.rt para ordenar todas las rainbowtables dentro de directorio.
+Por último usaremos la orden rcrack seguido del directorio de las rainbowtbles -h y la cadena hash que queremos descifrar.
 
+rcrack -h hash
 
 # Actividad 4- Ataques contra contraseñas en Sistemas Windows
 
