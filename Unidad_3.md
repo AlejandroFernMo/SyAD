@@ -27,6 +27,7 @@ Es una edición restaurada de Hiren's BootCD basada en Windows 10 PE x64. Dado q
 -Despues procedemos a acceder al archivo common-password donde añadiremos los siguientes parametros para configurar el tipo de contraseña que exigiremos a nuestros usuarios.
 
 ![Directiva](imgU3/Act2DirectivaContraseñaUbu4.PNG)
+
 -retry: Número de intentos antes de que el sistema devuelva un error.
 -minlen: Longitud mínima de contraseña.
 -difok: Cambios de caracteres que debe tener la nueva contraseña en comparación con la vieja.
