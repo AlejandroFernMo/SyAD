@@ -10,6 +10,15 @@ Es una edición restaurada de Hiren's BootCD basada en Windows 10 PE x64. Dado q
 - Descarga: [Hiren's BootCD PE](https://www.hirensbootcd.org/download/)
 - Guía: [Hiren's BootCD How-Tos](https://www.hirensbootcd.org/howtos/)
 
+  ## Deep Freeze
+  Se trata de una herramienta que permite evitar errores y cambios en la configuracion de nuestro sistema operativo. Granatiza el buen uso de las terminales de trabajo o de cambios no autorizados con un reinicio.
+ - Descarga: [Deep Freeze](https://www.faronics.com/es/downloads_es)
+ - Guia: [Deep Freeze](https://www.faronics.com/es/document-library_es?doctype=doc_user_guide&qcAC=1)
+
+  ## Shadow Defender
+  Se trata de una herramienta de facil uso que permite al usuario prevenir cambios no deseados o maliciosos en el equipo
+  - Descarga: [Shadow Defender](http://www.shadowdefender.com/download.html)
+  - Guia: [Shadow Defender](http://www.shadowdefender.com/help.html)
 
 # Actividad 2.- Configuración de Contraseñas Seguras en Windows y Linux
 -Nos dirigimos a directivas de seguridad local de hay podemos dirigirnos a Directivas d e cuenta > Directivas de contraseñas
